@@ -8,7 +8,7 @@ import java.util.*;
 public class Main {
     public static void main (String[] args) {
         Set<String> nonTerminals = new HashSet<>(Arrays.asList("S", "R", "L"));
-        Set<String> terminals = new HashSet<>(Arrays.asList("a", "b", "c", "d"));
+        Set<String> terminals = new HashSet<>(Arrays.asList("a", "b", "c", "d", "e", "f"));
         Map<String, List<String>> productions = new HashMap<>();
         productions.put("S", Arrays.asList("aS", "bS", "cR", "dL"));
         productions.put("R", Arrays.asList("dL", "e"));
