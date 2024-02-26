@@ -16,7 +16,7 @@ The primary objectives of this project are:
 1. To understand the definition and characteristics of a formal language.
 2. To set up an initial framework for a project that evolves throughout the semester.
 3. To demonstrate proficiency in handling laboratory tasks and projects related to formal languages.
-
+ nk
 ## Tasks
 
 1. GitHub Repository Setup:
