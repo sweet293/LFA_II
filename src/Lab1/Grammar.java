@@ -62,5 +62,63 @@ public class Grammar {
         return finiteAutomaton;
     }
 
+    public String classifyGrammarType() {
+        // Check if it's a regular grammar
+        if (isRegularGrammar()) {
+            return "Type 3 (Regular Grammar)";
+        }
+
+        // Check if it's a context-free grammar
+        if (isContextFreeGrammar()) {
+            return "Type 2 (Context-Free Grammar)";
+        }
+
+        // Check if it's a context-sensitive grammar
+        if (isContextSensitiveGrammar()) {
+            return "Type 1 (Context-Sensitive Grammar)";
+        }
+
+        // If none of the above, it's an unrestricted grammar (Type 0)
+        return "Type 0 (Unrestricted Grammar)";
+    }
+
+    private boolean isRegularGrammar() {
+        // Regular grammars have only productions of the form A -> a or A -> aB
+        for (String nonTerminal : productions.keySet()) {
+            for (String production : productions.get(nonTerminal)) {
+                // If there's a production that violates regular grammar rules, return false
+                if (!(production.length() == 1 || (production.length() == 2 && Character.isLowerCase(production.charAt(0))))) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private boolean isContextFreeGrammar() {
+        // Context-free grammars have productions of the form A -> α, where α is any string
+        for (String nonTerminal : productions.keySet()) {
+            for (String production : productions.get(nonTerminal)) {
+                // If there's a production that violates context-free grammar rules, return false
+                if (production.length() == 0 || !Character.isUpperCase(production.charAt(0))) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private boolean isContextSensitiveGrammar() {
+        // Context-sensitive grammars have productions of the form αAβ -> αγβ, where A is a non-terminal and α, β, γ are strings
+        for (String nonTerminal : productions.keySet()) {
+            for (String production : productions.get(nonTerminal)) {
+                // If there's a production that violates context-sensitive grammar rules, return false
+                if (production.length() < 3 || !Character.isUpperCase(production.charAt(1))) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
 }

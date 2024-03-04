@@ -22,5 +22,6 @@ public class Main {
             System.out.println(str + ": " + finiteAutomaton.validate(str));
         }
 
+        System.out.println("Grammar type: " + grammar.classifyGrammarType());
     }
 }
