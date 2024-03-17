@@ -1,5 +1,4 @@
 package Lab3.AgainLab3;
-
 //class to initialize a token
 class Token {
     public TokenType type; //type of the token, identifier, operator, separator, real, keyword, none

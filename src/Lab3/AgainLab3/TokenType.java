@@ -1,5 +1,4 @@
 package Lab3.AgainLab3;
-
 //enumeration of types of tokens
 enum TokenType {
 

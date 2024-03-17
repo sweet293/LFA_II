@@ -7,7 +7,6 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class Lexer {
     //array of keywords
     private static final String[] KEYWORDS = {"while", "if", "else", "float", "double", "int", "string"};
