@@ -1,6 +1,7 @@
 package Lab4;
 import java.util.Random;
 
+
 public class Main {
     public static void main(String[] args) {
         String rule1 = "M?N{" + "2}" + "(O|P){" + "3}" +"Q*R+";
