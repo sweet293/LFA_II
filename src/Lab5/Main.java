@@ -44,6 +44,7 @@ public class Main {
                 System.out.println("Initial state must be a single character!");
             }
         }
+
         // Getting rules from the user
         System.out.println("+------------------------------------------------------+");
         System.out.println("|Give rules in the form A B (space-delimited), for A->B|");
