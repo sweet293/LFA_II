@@ -54,7 +54,7 @@ public class Lexer {
         if (matcher.find()) {
             String match = matcher.group();  //extract the match and if the current match is longer
             //then previous match, it updates largestMatch with the current match
-            //if it is the longest, it will be of type LIRETAL
+            //if it is the longest, it will be of type LITERAL
             if (match.length() > largestMatch.length()) {
                 largestMatch = match;
                 largestMatchType = TokenType.LITERAL;
@@ -113,7 +113,7 @@ public class Lexer {
         List<Token> tokens = new ArrayList<>();
 
         try {
-            File inputFile = new File("C:\\...\\Lab3\\Adder.java"); //file path for adder.java
+            File inputFile = new File("C:\\Users\\andre\\IdeaProjects\\LFA\\lfa\\src\\Lab3\\Adder.java"); //file path for adder.java
             Scanner scanner = new Scanner(inputFile);
 
             //read input file
