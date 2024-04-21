@@ -33,7 +33,6 @@ public class Main {
                 System.out.println("That's not an integer!");
             }
         }
-
         // Prompting user for the initial state, ensuring it's a single character
         String S;
         while (true) {
