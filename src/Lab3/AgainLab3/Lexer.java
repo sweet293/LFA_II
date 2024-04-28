@@ -1,4 +1,5 @@
 package Lab3.AgainLab3;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -8,6 +9,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Lexer {
+    private static List<Token> tokens = new ArrayList<>();
+
     //array of keywords
     private static final String[] KEYWORDS = {"while", "if", "else", "float", "double", "int", "string"};
 
@@ -150,10 +153,13 @@ public class Lexer {
             e.printStackTrace();
         }
     }
+    // Add a static method to get the tokens list
+    public static List<Token> getTokens() {
+        return tokens;
+    }
     //main method
     public static void main(String[] args) {
         lexer();
+
     }
 }
-
-

@@ -1,6 +1,6 @@
 package Lab3.AgainLab3;
 //class to initialize a token
-class Token {
+public class Token {
     public TokenType type; //type of the token, identifier, operator, separator, real, keyword, none
     public String match; //matches patters to their tokens. When a match is found,
     // it is extracted and analysed. Each character will be analysed. if there is a character after it,
